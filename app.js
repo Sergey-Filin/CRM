@@ -20,6 +20,7 @@ app.use(passport.initialize());
 require("./middleware/passport")(passport);
 
 app.use(require("morgan")("dev"));
+app.use("/uploads", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(require("cors")());
@@ -29,8 +30,5 @@ app.use("/api/analytics", analyticsRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/order", orderRoutes);
 app.use("/api/position", positionRoutes);
-
-var publicDir = require('path').join(__dirname,'/public');
-app.use(express.static(publicDir));
 
 module.exports = app;

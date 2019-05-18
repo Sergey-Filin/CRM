@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
   name: {
@@ -8,12 +8,12 @@ const categorySchema = new Schema({
   },
   imageSrc: {
     type: String,
-    default: ''
+    default: ""
   },
   user: {
-    ref: 'users',
+    ref: "users",
     type: Schema.Types.ObjectId
   }
-})
+});
 
-module.exports = mongoose.model('categories', categorySchema)
+module.exports = mongoose.model("categories", categorySchema);

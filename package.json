@@ -2,13 +2,18 @@
   "name": "crm",
   "version": "1.0.0",
   "description": "crm app with angular and express",
-  "main": "index.js",
+	"main": "index.js",
+	"engines": {
+		"node":"11.14.0",
+		"npm":"6.9.0"
+	},
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
     "client-install": "npm install --prefix client",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix client"
   },
   "author": "Sergey Filin",
   "license": "ISC",

@@ -5,7 +5,7 @@ import {User} from '../interfaces'
 import {tap} from 'rxjs/operators'
 
 @Injectable({
-  providedIn: 'root'       // вместо регистрации в providers[] app.module
+  providedIn: 'root'  
 })
 export class AuthService {
 

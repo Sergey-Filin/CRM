@@ -46,17 +46,17 @@ export class AnalyticsPageComponent implements AfterViewInit, OnDestroy {
       orderConfig.data = data.chart.map(item => item.order);
 
       // **** Gain ****
-      // gainConfig.labels.push('18.05.2019')
-      // gainConfig.labels.push('19.05.2019')
-      // gainConfig.data.push(1500)
-      // gainConfig.data.push(700)
+      gainConfig.labels.push('18.06.2019')
+      gainConfig.labels.push('19.05.2019')
+      gainConfig.data.push(1500)
+      gainConfig.data.push(700)
       // **** /Gain ****
 
       // **** Order ****
-      // orderConfig.labels.push('18.05.2019')
-      // orderConfig.labels.push('19.05.2019')
-      // orderConfig.data.push(8)
-      // orderConfig.data.push(2)
+      orderConfig.labels.push('18.05.2019')
+      orderConfig.labels.push('19.05.2019')
+      orderConfig.data.push(8)
+      orderConfig.data.push(2)
       // **** /Order ****
 
       const gainCtx = this.gainRef.nativeElement.getContext("2d");
